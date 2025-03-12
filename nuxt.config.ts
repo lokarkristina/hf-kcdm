@@ -24,4 +24,17 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  app: {
+    head: {
+      title: '✨ KCDM ✨',
+      meta: [
+        {
+          name: 'description',
+          content: 'Kompetenčni center za design management.',
+        },
+        { name: 'keywords', content: 'design, management, kcdm' },
+      ],
+    },
+  },
 })
