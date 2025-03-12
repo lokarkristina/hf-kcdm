@@ -11,4 +11,17 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-03-12',
+
+  css: ['~/assets/css/fonts.css'],
+
+  tailwindcss: {
+    config: {
+      theme: {
+        fontFamily: {
+          sans: ['Verb', 'sans-serif'],
+          serif: ['Georgia', 'serif'],
+        },
+      },
+    },
+  },
 })

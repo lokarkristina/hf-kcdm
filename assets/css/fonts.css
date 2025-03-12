@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Verb';
+  src: url('./fonts/Verb.woff2') format('woff2'),
+    url('./fonts/Verb.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Verb';
+  src: url('./fonts/Verb-Ultra.woff2') format('woff2'),
+    url('./fonts/Verb-Ultra.woff') format('woff');
+  font-weight: 950;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
