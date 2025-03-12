@@ -1,29 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/tailwindcss'],
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxt/eslint'],
-
-  eslint: {
-    config: {
-      stylistic: true,
-      typescript: true,
-    },
-  },
-
-  compatibilityDate: '2025-03-12',
-
-  css: ['~/assets/css/fonts.css'],
-
-  tailwindcss: {
-    config: {
-      theme: {
-        fontFamily: {
-          sans: ['Verb', 'sans-serif'],
-          serif: ['Georgia', 'serif'],
-        },
-      },
-    },
-  },
 
   app: {
     head: {
@@ -36,5 +14,21 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'design, management, kcdm' },
       ],
     },
+  },
+
+  css: ['~/assets/css/fonts.css', '~/assets/css/app.css'],
+
+  compatibilityDate: '2025-03-12',
+
+  eslint: {
+    config: {
+      stylistic: true,
+      typescript: true,
+    },
+  },
+
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+    viewer: true,
   },
 })
