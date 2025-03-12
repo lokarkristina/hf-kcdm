@@ -1,8 +1,6 @@
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt({
-  rules: {
-    'vue/html-indent': ['error', 2],
-  },
-})
+export default withNuxt(
+  // Your custom configs here
+)
