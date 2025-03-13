@@ -1,3 +1,15 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.p-formatted {
+  /* @todo this seems sus */
+  margin-block-end: theme('spacing.5');
+  color: theme('colors.captions')
+}
+
+.link-inline {
+  font-size: inherit;
+  line-height: 1.4;
+  color: theme('colors.ocean-green.500');
+}

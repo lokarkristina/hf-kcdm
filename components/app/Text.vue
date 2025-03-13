@@ -13,12 +13,18 @@ const textStyling = computed(() => ({
 </script>
 
 <template>
-  <!-- use text content safely, we need it for links inside text -->
-  <p
-    :class="textStyling"
-    class="mb-5"
-    v-html="newsDetail[teaser ? 'teaserText' : 'text']"
-  />
+  <div class="text-formatted">
+    <!-- use text content safely, we need it for links inside text -->
+    <p
+      :class="textStyling"
+      class="p-formatted"
+      v-html="newsDetail[teaser ? 'teaserText' : 'text']"
+    />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+/* reuse the styling on all text elements */
+p {
+}
+</style>

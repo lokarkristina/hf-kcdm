@@ -13,9 +13,10 @@ module.exports = {
       // these colors need better names @todo
       colors: {
         'hf-bg': '#F2F1EE',
-        'hf-captions-gray': '#737A77',
-        'hf-lines-gray': '#D8D7D3',
+        'captions': '#737A77',
+        'lines': '#D8D7D3',
         'hf-text-gray': '#3E5F52',
+        'ocean': '4BAC87',
         'ocean-green': {
           DEFAULT: '#4BAC87',
           50: '#C8E7DB',
@@ -60,7 +61,7 @@ module.exports = {
             gridColumn: '6 / -1',
           },
         },
-        '.grid-4-8-full': {
+        '.grid-4-8-full': { // @todo maybe this is getting repeated?
           '& > *:nth-child(odd)': {
             gridColumn: '1 / 5',
           },

@@ -13,7 +13,7 @@ import newsFeatured from '~/db/newsFeatured'
 
     <AppText :teaser="true" />
 
-    <p class="text-sm text-hf-captions-gray uppercase">
+    <p class="text-sm text-captions uppercase">
       {{ newsFeatured.date }}
     </p>
   </div>

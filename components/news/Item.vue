@@ -16,7 +16,7 @@ const { item } = defineProps<{
       >
         {{ item.title }}
       </h2>
-      <p class="text-sm text-hf-captions-gray">
+      <p class="text-sm text-captions">
         {{ formatDate(item.date) }}
       </p>
     </NuxtLink>
