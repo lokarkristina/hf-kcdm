@@ -13,7 +13,7 @@ const textStyling = computed(() => ({
 </script>
 
 <template>
-  <!-- Use text content safely -->
+  <!-- use text content safely, we need it for links inside text -->
   <p
     :class="textStyling"
     class="mb-5"

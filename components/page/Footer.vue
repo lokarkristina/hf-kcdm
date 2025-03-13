@@ -5,7 +5,7 @@
     <UContainer :ui="{ constrained: 'max-w-main' }">
       <!-- socials & newsletter -->
       <div class="footer-connect">
-        <div class="grid grid-cols-split-40-60">
+        <div class="grid-container grid-4-8-full">
           <div class="footer-socials">
             <p class="text-sm uppercase font-ultra">
               Spremljajte nas
@@ -28,7 +28,7 @@
       </div>
 
       <!-- project info -->
-      <div class="grid footer-info grid-cols-split-40-60">
+      <div class="footer-info grid-container grid-4-8-full">
         <div>
           <p>Arhivske vsebine</p>
           <p>
@@ -73,7 +73,3 @@
     </UContainer>
   </footer>
 </template>
-
-<style scoped>
-/* @todo using tailwind variables doen't work */
-</style>

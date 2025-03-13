@@ -52,4 +52,29 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.grid-4-8': {
+          '& > *': {
+            gridColumn: '6 / -1',
+          },
+        },
+        '.grid-4-8-full': {
+          '& > *:nth-child(odd)': {
+            gridColumn: '1 / 5',
+          },
+          '& > *:nth-child(even)': {
+            gridColumn: '6 / -1',
+          },
+        },
+        '.grid-container': {
+          display: 'grid',
+          gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+          columnGap: 'calc(0.25rem * 8)', // @todo how to add var(--spacing)
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 }

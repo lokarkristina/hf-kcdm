@@ -17,54 +17,59 @@ import newsDetail from '~/db/newsDetail'
       </template>
     </TitleArea>
 
-    <!-- image -->
+    <UContainer :ui="{ constrained: 'max-w-main' }">
+      <div class="grid-container grid-4-8">
+        <!-- image -->
+        <AppImage />
 
-    <!-- date -->
-    <p class="news-detail__date">
-      {{ formatDate(newsDetail.date) }}
-    </p>
+        <!-- date -->
+        <p class="news-detail__date">
+          {{ formatDate(newsDetail.date) }}
+        </p>
 
-    <!-- teaser text -->
-    <AppText
-      :includes="['text']"
-      :teaser="true"
-    />
+        <!-- teaser text -->
+        <AppText
+          :includes="['text']"
+          :teaser="true"
+        />
 
-    <!-- content -->
-    <AppText :includes="['text', 'link']" />
-    <AppHeading size="2" />
-    <AppText :includes="['text', 'list']" />
-    <AppHeading size="3" />
-    <AppText />
+        <!-- content -->
+        <AppText :includes="['text', 'link']" />
+        <AppHeading size="2" />
+        <AppText :includes="['text', 'list']" />
+        <AppHeading size="3" />
+        <AppText />
 
-    <!-- video -->
-    <AppVideo />
+        <!-- video -->
+        <AppVideo />
 
-    <AppHeading size="2" />
-    <AppText />
-    <AppText :includes="['text', 'list']" />
-    <AppHeading size="3" />
-    <AppText />
-    <!-- image with desc. -->
-    <AppImage />
+        <AppHeading size="2" />
+        <AppText />
+        <AppText :includes="['text', 'list']" />
+        <AppHeading size="3" />
+        <AppText />
+        <!-- image with desc. -->
+        <AppImage />
 
-    <AppHeading size="2" />
-    <AppText />
-    <!-- highlight -->
-    <AppHighlight />
+        <AppHeading size="2" />
+        <AppText />
+        <!-- highlight -->
+        <AppHighlight />
 
-    <AppHeading size="3" />
-    <AppText />
-    <AppText />
-    <!-- quote -->
-    <AppQuote />
-    <AppText />
+        <AppHeading size="3" />
+        <AppText />
+        <AppText />
+        <!-- quote -->
+        <AppQuote />
+        <AppText />
 
-    <!-- gallery -->
-    <AppGallery />
+        <!-- gallery -->
+        <AppGallery />
 
-    <!-- some more text -->
-    <AppText />
+        <!-- some more text -->
+        <AppText />
+      </div>
+    </UContainer>
   </div>
 </template>
 

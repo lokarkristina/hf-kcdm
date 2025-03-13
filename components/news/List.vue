@@ -14,8 +14,8 @@ const pagedNews = computed(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-split-40-60 gap-x-40 news-list__list">
-    <div class="news-list grid gap-5 col-[-1]">
+  <div class="grid-container grid-4-8 news-list__list">
+    <div class="news-list grid gap-5 ">
       <NewsItem
         v-for="newsItem in pagedNews"
         :key="newsItem.id"
@@ -33,7 +33,7 @@ const pagedNews = computed(() => {
           query: { page },
         })"
       :ui="{
-        wrapper: 'col-[-1]',
+        wrapper: '',
       }"
     />
   </div>
