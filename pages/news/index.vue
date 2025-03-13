@@ -1,7 +1,22 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Page: news</div>
+  <div>
+    <!-- title area -->
+    <TitleArea
+      page="list"
+      :show-link-back="false"
+    >
+      <template #title>
+        Novice
+      </template>
+    </TitleArea>
+
+    <!-- list of news -->
+    <UContainer :ui="{ constrained: 'max-w-main' }">
+      <NewsList />
+    </UContainer>
+  </div>
 </template>
 
 <style scoped></style>

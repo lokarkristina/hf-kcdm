@@ -1,0 +1,81 @@
+<script setup lang="ts">
+const props = defineProps<{
+  page: string
+  showLinkBack: boolean
+}>()
+
+// @todo figure out the logic on how the
+// nav gets built
+const sideLinks = [
+  { label: 'Novice', to: '/news' },
+  { label: 'Prihajajoči dogodki', to: '/' },
+  { label: 'Pretekli dogodki', to: '/' },
+]
+</script>
+
+<template>
+  <!-- @todo add container constrained to default -->
+  <UContainer :ui="{ constrained: 'max-w-main' }">
+    <!-- @todo sporoči za spacinge -->
+    <div
+      class="grid font-ultra title-area gap-x-40 text-white grid-cols-split-40-60 grid-rows-[auto_minmax(206px,1fr)_auto]"
+    >
+      <!-- @todo adding col-2 doesn't add a class 🤔 -->
+      <div
+        class="col-[1/-1] row-[1/3] grid grid-rows-[auto_1fr] grid-cols-subgrid bg-ocean-green py-7 px-6"
+      >
+        <!-- back link -->
+        <template v-if="props.showLinkBack">
+          <ULink
+            to="/news"
+            inactive-class="flex items-center gap-2.5 uppercase text-sm col-[2]"
+          >
+            <UIcon
+              name="i-heroicons-arrow-long-left-solid"
+              class="w-45"
+            />
+            Novice
+          </ULink>
+        </template>
+
+        <h1 class="col-[2] text-big-title leading-[0.9]">
+          <slot name="title" />
+        </h1>
+      </div>
+
+      <!-- back to frontpage & side navigation links -->
+      <aside
+        class="grid grid-rows-subgrid col-[1] row-[1/-1] my-7 px-6 border-e-2 border-ocean-green-600"
+      >
+        <div class="row-[1] link-back col-[1]">
+          <!-- link to homepage -->
+          <ULink
+            to="/"
+            inactive-class="flex items-center gap-2.5 uppercase text-sm"
+          >
+            <UIcon
+              name="i-heroicons-arrow-long-left-solid"
+              class="w-45"
+            />
+            Aktualno
+          </ULink>
+        </div>
+        <div class="row-[-1] side-navigation uppercase text-primary">
+          <!-- side navigation -->
+          <UVerticalNavigation
+            :links="sideLinks"
+            :ui="{
+              base: 'border-l-6 border-ocean-green-600 ',
+              rounded: 'rounded-none',
+              size: 'text-sm',
+              font: 'font-ultra',
+              padding: 'ps-4',
+            }"
+          />
+        </div>
+      </aside>
+    </div>
+  </UContainer>
+</template>
+
+<style scoped></style>

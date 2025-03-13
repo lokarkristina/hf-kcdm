@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer class="footer">
+  <footer class="pb-40 footer">
     <UContainer :ui="{ constrained: 'max-w-main' }">
       <!-- socials & newsletter -->
       <div class="footer-connect">
@@ -10,7 +10,7 @@
             <p class="text-sm uppercase font-ultra">
               Spremljajte nas
             </p>
-            <div class="footer-socials__icons flex items-center gap-3">
+            <div class="flex items-center gap-3 footer-socials__icons">
               <SocialIcon type="facebook" />
               <SocialIcon type="linkedin" />
               <SocialIcon type="vine" />
@@ -28,7 +28,7 @@
       </div>
 
       <!-- project info -->
-      <div class="footer-info grid grid-cols-split-40-60">
+      <div class="grid footer-info grid-cols-split-40-60">
         <div>
           <p>Arhivske vsebine</p>
           <p>

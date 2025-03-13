@@ -18,6 +18,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/fonts.css', '~/assets/css/app.css'],
 
+  colorMode: {
+    preference: 'light',
+  },
+
   compatibilityDate: '2025-03-12',
 
   eslint: {

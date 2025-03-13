@@ -1,16 +1,15 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="grid grid-rows-[auto_1fr_auto] bg-hf-bg min-h-dvh">
     <!-- announce route changes -->
     <NuxtRouteAnnouncer />
     <!-- header -->
-    <AppHeader />
+    <PageHeader />
     <!-- content slot -->
     <slot />
     <!-- footer -->
-    <AppFooter />
+    <PageFooter />
     <!-- side modal -->
     <USlideovers />
   </div>
