@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { formatDate } from '#imports'
-import newsDetail from '~/db/newsDetail'
+import content from '~/db/content'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import newsDetail from '~/db/newsDetail'
     >
       <!-- @todo maybe this needs to go out of the title area -->
       <template #title>
-        {{ newsDetail.h1 }}
+        {{ content.h1 }}
       </template>
     </TitleArea>
 
@@ -24,7 +24,7 @@ import newsDetail from '~/db/newsDetail'
 
         <!-- date -->
         <p class="news-detail__date">
-          {{ formatDate(newsDetail.date) }}
+          {{ formatDate(content.date) }}
         </p>
 
         <!-- teaser text -->
@@ -35,28 +35,46 @@ import newsDetail from '~/db/newsDetail'
 
         <!-- content -->
         <AppText :includes="['text', 'link']" />
-        <AppHeading size="2" />
+        <AppHeading
+          type="h2"
+          :text="content.heading2"
+        />
         <AppText :includes="['text', 'list']" />
-        <AppHeading size="3" />
+        <AppHeading
+          type="h3"
+          :text="content.heading3"
+        />
         <AppText />
 
         <!-- video -->
         <AppVideo />
 
-        <AppHeading size="2" />
+        <AppHeading
+          type="h2"
+          :text="content.heading2"
+        />
         <AppText />
         <AppText :includes="['text', 'list']" />
-        <AppHeading size="3" />
+        <AppHeading
+          type="h3"
+          :text="content.heading3"
+        />
         <AppText />
         <!-- image with desc. -->
         <AppImage />
 
-        <AppHeading size="2" />
+        <AppHeading
+          type="h2"
+          :text="content.heading2"
+        />
         <AppText />
         <!-- highlight -->
         <AppHighlight />
 
-        <AppHeading size="3" />
+        <AppHeading
+          type="h3"
+          :text="content.heading3"
+        />
         <AppText />
         <AppText />
         <!-- quote -->

@@ -10,8 +10,11 @@ const { src } = defineProps<{
     <source
       srcset="/shared-assets/images/examples/surfer.jpg"
       media="(min-width: 600px)"
-    />
-    <img :src="src" alt="" />
+    >
+    <img
+      :src="src"
+      alt=""
+    >
   </picture>
 </template>
 

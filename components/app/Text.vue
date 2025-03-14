@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import newsDetail from '~/db/newsDetail'
+import newsDetail from '~/db/content'
 
 const { teaser } = defineProps<{
   teaser?: boolean
@@ -17,7 +17,7 @@ const textStyling = computed(() => ({
     <!-- use text content safely, we need it for links inside text -->
     <p
       :class="textStyling"
-      class="p-formatted"
+      class="p-formatted font-serif"
       v-html="newsDetail[teaser ? 'teaserText' : 'text']"
     />
   </div>

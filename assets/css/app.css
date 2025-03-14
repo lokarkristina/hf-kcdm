@@ -5,7 +5,7 @@
 .p-formatted {
   /* @todo this seems sus */
   margin-block-end: theme('spacing.5');
-  color: theme('colors.captions')
+  /* color: theme('colors.captions') */
 }
 
 .link-inline {
