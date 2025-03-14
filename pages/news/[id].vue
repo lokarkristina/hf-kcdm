@@ -35,46 +35,28 @@ import content from '~/db/content'
 
         <!-- content -->
         <AppText :includes="['text', 'link']" />
-        <AppHeading
-          type="h2"
-          :text="content.heading2"
-        />
+        <AppHeading type="h2" />
         <AppText :includes="['text', 'list']" />
-        <AppHeading
-          type="h3"
-          :text="content.heading3"
-        />
+        <AppHeading type="h3" />
         <AppText />
 
         <!-- video -->
         <AppVideo />
 
-        <AppHeading
-          type="h2"
-          :text="content.heading2"
-        />
+        <AppHeading type="h2" />
         <AppText />
         <AppText :includes="['text', 'list']" />
-        <AppHeading
-          type="h3"
-          :text="content.heading3"
-        />
+        <AppHeading type="h3" />
         <AppText />
         <!-- image with desc. -->
         <AppImage />
 
-        <AppHeading
-          type="h2"
-          :text="content.heading2"
-        />
+        <AppHeading type="h2" />
         <AppText />
         <!-- highlight -->
-        <AppHighlight />
+        <PtHighlight />
 
-        <AppHeading
-          type="h3"
-          :text="content.heading3"
-        />
+        <AppHeading type="h3" />
         <AppText />
         <AppText />
         <!-- quote -->

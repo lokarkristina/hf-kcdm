@@ -12,11 +12,11 @@ module.exports = {
     extend: {
       // these colors need better names @todo
       colors: {
+        'accent': '#E7745E',
         'hf-bg': '#F2F1EE',
         'captions': '#737A77',
         'lines': '#D8D7D3',
         'hf-text-gray': '#3E5F52',
-        'ocean': '4BAC87',
         'ocean-green': {
           DEFAULT: '#4BAC87',
           50: '#C8E7DB',

@@ -1,4 +1,6 @@
-const newsDetail = {
+export const highlight = 'This is the Highlight. Lorem ipsum gulih dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.'
+
+const content = {
   h1: 'Nagrada Good Design Award Avstralija za projekt KCDM',
   image: '/images/image-awards.png',
   date: '03-05-2025',
@@ -16,7 +18,7 @@ const newsDetail = {
       <li>design razmišljanja in design vodenja podjetju omogoča vrsto prednosti pred konkurenti</li>
     </ul>
   `,
-  highlight: 'This is the Highlight. Lorem ipsum gulih dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.',
+  highlight,
   quote: {
     text: 'This is the quote. Lorem ipsum gulih dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. ',
     author: 'Jaka Jaklič',
@@ -24,4 +26,4 @@ const newsDetail = {
   },
 }
 
-export default newsDetail
+export default content
