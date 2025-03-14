@@ -4,10 +4,22 @@ export const quote = {
   author: 'Jaka Jaklič',
   company: 'Podjetje d.o.o.',
 }
+export const image = {
+  default: '/images/person-presenting.png',
+  images: [
+    { src: '/images/person-presenting.png', media: '(max-width: calc(var(--breakpoint-sm) - 1px))' },
+    { src: '/images/peope-chatting.png', media: '(min-width: var(--breakpoint-sm)) and (max-width: calc(var(--breakpoint-md) - 1px))' },
+    { src: '/images/person-presenting.png', media: '(min-width: var(--breakpoint-md)) and (max-width: calc(var(--breakpoint-lg) - 1px))' },
+    { src: '/images/image-awards.png', media: '(min-width: var(--breakpoint-lg)) and (max-width: calc(var(--breakpoint-xl) - 1px))' },
+    { src: '/images/person-presenting.png', media: '(min-width: var(--breakpoint-xl)) and (max-width: calc(var(--breakpoint-2xl) - 1px))' },
+    { src: '/images/image-awards.png', media: '(min-width: var(--breakpoint-2xl))' },
+  ],
+  description: 'Lorem ipsum dolor sit amet consectetur. Morbi consequat ut sollicitudin lorem. Platea auctor sit. Lorem ipsum dolor sit amet consectetur. Morbi consequat ut sollicitudin lorem. Platea auctor sit.',
+}
 
 const content = {
   h1: 'Nagrada Good Design Award Avstralija za projekt KCDM',
-  image: '/images/image-awards.png',
+  image,
   date: '03-05-2025',
   teaserText: 'Teaser text - Kompetenčni center za design management svojim članom ponuja nabor pristopov, orodij in znanj -, ki podjetju omogoča, da design uporablja za doseganje poslovnih ciljev.',
   text: 'Celostno razumevanje in učinkovito upravljanje področij designa: design raziskav, storitvenega oblikovanja, trajnostnega oblikovanja, načrtovanja uporabniških izkušenj, upravljanja uporabniških poti in stičnih točk znamke z uporabniki, design razmišljanja in design vodenja podjetju omogoča vrsto prednosti pred konkurenti.',

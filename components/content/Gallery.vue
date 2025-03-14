@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Component: app/Video</div>
+  <div class="content content-gallery">
+    Component: app/Gallery
+  </div>
 </template>
 
 <style scoped></style>

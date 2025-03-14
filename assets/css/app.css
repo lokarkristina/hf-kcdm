@@ -15,7 +15,9 @@
 }
 
 /* used for content blocks */
-.block {
+.content {
+    margin-block-end: theme('spacing.5');
+    
   &--offset {
     padding-inline-start: theme('spacing.6');
     border: 0 solid theme('colors.lines');

@@ -20,7 +20,7 @@ import content from '~/db/content'
     <UContainer :ui="{ constrained: 'max-w-main' }">
       <div class="grid-container grid-4-8">
         <!-- image -->
-        <AppImage />
+        <ContentImage />
 
         <!-- date -->
         <p class="news-detail__date">
@@ -28,46 +28,46 @@ import content from '~/db/content'
         </p>
 
         <!-- teaser text -->
-        <AppText
+        <ContentText
           :includes="['text']"
           :teaser="true"
         />
 
         <!-- content -->
-        <AppText :includes="['text', 'link']" />
-        <AppHeading type="h2" />
-        <AppText :includes="['text', 'list']" />
-        <AppHeading type="h3" />
-        <AppText />
+        <ContentText :includes="['text', 'link']" />
+        <ContentHeading type="h2" />
+        <ContentText :includes="['text', 'list']" />
+        <ContentHeading type="h3" />
+        <ContentText />
 
         <!-- video -->
-        <AppVideo />
+        <ContentVideo />
 
-        <AppHeading type="h2" />
-        <AppText />
-        <AppText :includes="['text', 'list']" />
-        <AppHeading type="h3" />
-        <AppText />
+        <ContentHeading type="h2" />
+        <ContentText />
+        <ContentText :includes="['text', 'list']" />
+        <ContentHeading type="h3" />
+        <ContentText />
         <!-- image with desc. -->
-        <AppImage />
+        <ContentImage :show-description="true" />
 
-        <AppHeading type="h2" />
-        <AppText />
+        <ContentHeading type="h2" />
+        <ContentText />
         <!-- highlight -->
-        <BlockHighlight />
+        <ContentHighlight />
 
-        <AppHeading type="h3" />
-        <AppText />
-        <AppText />
+        <ContentHeading type="h3" />
+        <ContentText />
+        <ContentText />
         <!-- quote -->
-        <BlockQuote />
-        <AppText />
+        <ContentQuote />
+        <ContentText />
 
         <!-- gallery -->
-        <AppGallery />
+        <ContentGallery />
 
         <!-- some more text -->
-        <AppText />
+        <ContentText />
       </div>
     </UContainer>
   </div>

@@ -3,7 +3,8 @@ import { quote } from '~/db/content'
 </script>
 
 <template>
-  <div class="block-quote block--offset py-5 font-mont">
+  <!-- @todo why another different font? :o -->
+  <div class="content content-quote content--offset py-5 font-mont">
     <div
       aria-hidden="true"
       class="decorative-quotes flex w-[4.375rem] gap-5 h-12 mb-3.5"
