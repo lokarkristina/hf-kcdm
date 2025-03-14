@@ -13,3 +13,14 @@
   line-height: 1.4;
   color: theme('colors.ocean-green.500');
 }
+
+/* used for content blocks */
+.block {
+  &--offset {
+    padding-inline-start: theme('spacing.6');
+    border: 0 solid theme('colors.lines');
+    border-left-width: theme('spacing.[0.5]');
+    margin-bottom: theme('spacing.5');
+    color: theme('colors.accent');
+  }
+}

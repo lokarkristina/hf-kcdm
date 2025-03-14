@@ -1,4 +1,9 @@
 export const highlight = 'This is the Highlight. Lorem ipsum gulih dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.'
+export const quote = {
+  text: 'This is the quote. Lorem ipsum gulih dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. ',
+  author: 'Jaka Jaklič',
+  company: 'Podjetje d.o.o.',
+}
 
 const content = {
   h1: 'Nagrada Good Design Award Avstralija za projekt KCDM',
@@ -19,11 +24,7 @@ const content = {
     </ul>
   `,
   highlight,
-  quote: {
-    text: 'This is the quote. Lorem ipsum gulih dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. ',
-    author: 'Jaka Jaklič',
-    company: 'Podjetje d.o.o.',
-  },
+  quote,
 }
 
 export default content

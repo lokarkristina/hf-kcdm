@@ -54,13 +54,13 @@ import content from '~/db/content'
         <AppHeading type="h2" />
         <AppText />
         <!-- highlight -->
-        <PtHighlight />
+        <BlockHighlight />
 
         <AppHeading type="h3" />
         <AppText />
         <AppText />
         <!-- quote -->
-        <AppQuote />
+        <BlockQuote />
         <AppText />
 
         <!-- gallery -->

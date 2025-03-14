@@ -37,6 +37,7 @@ module.exports = {
           'Verb',
           'sans-serif',
         ],
+        mont: ['Montserrat', 'sans-serif'],
       },
       fontWeight: {
         ultra: '950',

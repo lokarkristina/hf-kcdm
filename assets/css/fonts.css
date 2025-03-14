@@ -17,3 +17,12 @@
   font-stretch: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('~/assets/fonts/Montserrat-Regular.ttf') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
