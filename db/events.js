@@ -1,4 +1,4 @@
-const events = [
+const eventsList = [
   {
     id: 1,
     title: 'Nagrada Good Design Award Avstralija za projekt KCDM',
@@ -61,4 +61,4 @@ const events = [
   },
 ]
 
-export default events
+export default eventsList

@@ -5,21 +5,17 @@ import newsFeatured from '~/db/newsFeatured'
 <template>
   <div class="news-featured">
     <!-- image -->
-    <AppImage />
+    <ContentImage />
 
     <h1 class="col-[6/-1] text-big-title leading-[0.9]">
       {{ newsFeatured.title }}
     </h1>
 
-    <AppText :teaser="true" />
+    <ContentText :is-teaser="true" />
 
-    <p class="text-sm text-captions uppercase">
-      {{ newsFeatured.date }}
-    </p>
-    <p class="date">
+    <!-- reset the text default spacer -->
+    <p class="date -mt-5">
       {{ newsFeatured.date }}
     </p>
   </div>
 </template>
-
-<style scoped></style>

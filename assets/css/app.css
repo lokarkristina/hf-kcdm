@@ -6,12 +6,32 @@
   --shadow-*: none;
 }
 
+/* @layer components {
+  .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  }
+} */
+
 .p-formatted {
   /* color: theme('colors.captions') */
 }
 
 /* used for content blocks */
 .content {
+  /* This function is deprecated, and we recommend using CSS theme variables instead. @todo */
   margin-block-end: theme('spacing.5');
 
   &--offset {

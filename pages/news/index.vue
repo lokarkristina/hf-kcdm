@@ -3,10 +3,7 @@
 <template>
   <div>
     <!-- title area -->
-    <TitleArea
-      page="list"
-      :show-link-back="false"
-    >
+    <TitleArea :show-link-back="false">
       <template #title>
         Novice
       </template>

@@ -1,4 +1,4 @@
-const news = [
+const newsList = [
   {
     id: 1,
     title: 'Nagrada Good Design Award Avstralija za projekt KCDM',
@@ -476,4 +476,4 @@ const news = [
   },
 ]
 
-export default news
+export default newsList

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
-  page: string
+const { showLinkBack } = defineProps<{
   showLinkBack: boolean
 }>()
 
@@ -16,7 +15,6 @@ const sideLinks = [
 <template>
   <!-- @todo add container constrained to default -->
   <UContainer :ui="{ constrained: 'max-w-main' }">
-    <!-- @todo sporoči za spacinge -->
     <!-- @todo a je vse ok here? -->
     <div
       class="font-ultra title-area gap-x-40 text-white grid-container grid-rows-[auto_minmax(206px,1fr)_auto]"
@@ -25,16 +23,26 @@ const sideLinks = [
         class="col-[1/-1] row-[1/3] grid grid-rows-[auto_1fr] grid-cols-subgrid bg-ocean-green py-7 px-6"
       >
         <!-- back link -->
-        <template v-if="props.showLinkBack">
+        <template v-if="showLinkBack">
           <ULink
             to="/news"
-            inactive-class="flex items-center gap-2.5 uppercase text-sm col-[6/-1]"
+            inactive-class="flex items-center gap-2.5 mb-7 uppercase text-sm col-[6/-1]"
           >
-            <UIcon
-              name="i-heroicons-arrow-long-left-solid"
-              class="w-45"
-            />
-            Novice
+            <!-- @todo get breakpoints into the js and v-if so it doesn't render -->
+            <span class="hidden md:block">
+              <AppArrow
+                direction="left"
+                size="lg"
+              />
+            </span>
+            <span class="md:hidden">
+              <AppArrow
+                direction="left"
+                size="sm"
+              />
+            </span>
+
+            <span> Novice </span>
           </ULink>
         </template>
 
@@ -47,17 +55,17 @@ const sideLinks = [
       <aside
         class="grid grid-rows-subgrid col-[1/5] row-[1/-1] my-7 px-6 border-e-2 border-ocean-green-600"
       >
-        <div class="row-[1] link-back col-[1]">
+        <div class="row-[1] link-back col-[1] hidden md:block">
           <!-- link to homepage -->
           <ULink
             to="/"
-            inactive-class="flex items-center gap-2.5 uppercase text-sm"
+            class="flex items-center gap-2.5 uppercase text-sm flex-shrink-0"
           >
-            <UIcon
-              name="i-heroicons-arrow-long-left-solid"
-              class="w-45"
+            <AppArrow
+              direction="left"
+              size="md"
             />
-            Aktualno
+            <span> Aktualno </span>
           </ULink>
         </div>
         <div class="row-[-1] side-navigation uppercase text-primary">
@@ -77,5 +85,3 @@ const sideLinks = [
     </div>
   </UContainer>
 </template>
-
-<style scoped></style>

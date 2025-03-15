@@ -6,7 +6,8 @@ const footerLinks = [
 </script>
 
 <template>
-  <footer class="pb-16 md:pb-40 footer mt-16 md:mt-28">
+  <!-- the bottom spacer is waaay too big on design, so reduce it -->
+  <footer class="pb-5 md:pb-10 footer mt-16 md:mt-28">
     <UContainer :ui="{ constrained: 'max-w-main' }">
       <!-- socials & newsletter -->
       <div class="footer-connect py-6 border-t-8 border-lines">

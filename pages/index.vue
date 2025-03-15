@@ -3,18 +3,9 @@
 <template>
   <div>
     <!-- title area -->
-    <TitleArea
-      page="home"
-      :breadcrumbs="false"
-    >
+    <TitleArea :show-link-back="false">
       <template #title>
         Aktualno
-      </template>
-      <template #image>
-        <img
-          src="/images/image-awards.png"
-          alt="Fotografija z dogodka"
-        >
       </template>
     </TitleArea>
 
@@ -24,7 +15,9 @@
         <NewsFeatured />
 
         <!-- news lists -->
-        <div class="grid grid-cols-7 gap-x-8">
+        <div
+          class="grid grid-cols-7 gap-x-8 border-t border-ocean-green-500 pt-3.5 mt-6"
+        >
           <!-- 'Aktualno' -->
           <FeaturedList
             type="news"
@@ -47,5 +40,3 @@
     </UContainer>
   </div>
 </template>
-
-<style scoped></style>

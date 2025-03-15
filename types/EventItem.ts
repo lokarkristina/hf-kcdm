@@ -7,7 +7,7 @@
  * @property {string} date - The date when the event takes place
  * @property {string} location - The location where the event is held
  */
-export interface Event {
+export interface EventItem {
   id: number
   title: string
   date: string

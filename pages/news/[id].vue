@@ -7,7 +7,7 @@ import content from '~/db/content'
   <div class="news-detail">
     <!-- title area -->
     <!-- @todo add new layout za content area i think. -->
-    <TitleArea page="list" :show-link-back="true">
+    <TitleArea :show-link-back="true">
       <!-- @todo maybe this needs to go out of the title area -->
       <template #title>
         {{ content.h1 }}

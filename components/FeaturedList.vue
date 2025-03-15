@@ -1,25 +1,31 @@
 <script setup lang="ts">
-import news from '~/db/news'
-import events from '~/db/events'
+import newsList from '~/db/news'
+import eventsList from '~/db/events'
+import type { NewsItem } from '~/types/NewsItem'
+import type { EventItem } from '~/types/EventItem'
+
+const news = ref<NewsItem[]>([...newsList])
+const events = ref<EventItem[]>([...eventsList])
 
 const { type, count } = defineProps<{
   type: string
   count: number
 }>()
 
-const list = computed(() =>
-  [...(isNews.value ? news : events)]
+const isNews = computed(() => type === 'news')
+
+const list = computed<Array<NewsItem | EventItem>>(() =>
+  [...(isNews.value ? news.value : events.value)]
     .sort(() => Math.random() - 0.5)
     .slice(0, count),
 )
-
-const isNews = computed(() => type === 'news')
 </script>
 
 <template>
-  <div>
-    <p><slot name="title" /></p>
-
+  <div class="featured-list">
+    <!-- list title -->
+    <p><slot /></p>
+    <!-- list items -->
     <ul>
       <li
         v-for="item in list"
@@ -29,25 +35,28 @@ const isNews = computed(() => type === 'news')
           <p>
             {{ item.title }}
           </p>
-          <span>
-            {{ item.date }}
-          </span>
+          <span>{{ item.date }}</span>
         </template>
         <template v-else>
-          <p>
+          <p v-if="Object.keys(item).includes('location')">
             {{ item.location }}
           </p>
-          <span>
-            {{ item.date }}
-          </span>
+          <span>{{ item.date }}</span>
           <p>{{ item.title }}</p>
         </template>
       </li>
     </ul>
 
-    <!-- learm more -->
-    <UButton :label="`Več ${isNews ? 'novic' : 'dogodkov'}`" />
+    <!-- learm more link -->
+    <ULink
+      to="#"
+      class="flex items-center gap-2 uppercase text-ocean-green-500"
+    >
+      {{ `Več ${isNews ? 'novic' : 'dogodkov'}` }}
+      <AppArrow
+        direction="right"
+        size="lg"
+      />
+    </ULink>
   </div>
 </template>
-
-<style scoped></style>

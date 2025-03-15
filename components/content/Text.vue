@@ -26,7 +26,7 @@ const textStyling = computed(() => ({
     <!-- use text content safely, we need it for links inside text -->
     <p
       :class="textStyling"
-      class="p-formatted font-serif"
+      class="font-serif"
       v-html="getContent"
     />
   </div>
