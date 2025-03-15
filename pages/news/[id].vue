@@ -23,20 +23,19 @@ import content from '~/db/content'
         <ContentImage />
 
         <!-- date -->
-        <p class="news-detail__date">
+        <p
+          class="news-detail__date date inline-block pb-5 pt-2 pe-6 justify-self-start mb-5 border-b border-ocean-green-500"
+        >
           {{ formatDate(content.date) }}
         </p>
 
         <!-- teaser text -->
-        <ContentText
-          :includes="['text']"
-          :teaser="true"
-        />
+        <ContentText :is-teaser="true" />
 
         <!-- content -->
-        <ContentText :includes="['text', 'link']" />
+        <ContentText :has-link="true" />
         <ContentHeading type="h2" />
-        <ContentText :includes="['text', 'list']" />
+        <ContentText :has-list="true" />
         <ContentHeading type="h3" />
         <ContentText />
 
@@ -45,7 +44,7 @@ import content from '~/db/content'
 
         <ContentHeading type="h2" />
         <ContentText />
-        <ContentText :includes="['text', 'list']" />
+        <ContentText :has-list="true" />
         <ContentHeading type="h3" />
         <ContentText />
         <!-- image with desc. -->

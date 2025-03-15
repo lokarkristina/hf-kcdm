@@ -16,6 +16,9 @@ import newsFeatured from '~/db/newsFeatured'
     <p class="text-sm text-captions uppercase">
       {{ newsFeatured.date }}
     </p>
+    <p class="date">
+      {{ newsFeatured.date }}
+    </p>
   </div>
 </template>
 

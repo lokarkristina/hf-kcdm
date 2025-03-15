@@ -55,14 +55,19 @@ module.exports = {
     },
   },
   plugins: [
+    // @custom-variant pointer-coarse {
+    //   @media (pointer: coarse) {
+    //     @slot;
+    //   }
+    // }
     function ({ addUtilities }) {
       const newUtilities = {
         '.grid-4-8': {
           '& > *': {
-            gridColumn: '6 / -1',
+            gridColumn: '6 / -1', // @todo maybe this is getting repeated?
           },
         },
-        '.grid-4-8-full': { // @todo maybe this is getting repeated?
+        '.grid-4-8-full': {
           '& > *:nth-child(odd)': {
             gridColumn: '1 / 5',
           },
@@ -73,7 +78,18 @@ module.exports = {
         '.grid-container': {
           display: 'grid',
           gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
-          columnGap: 'calc(0.25rem * 8)', // @todo how to add var(--spacing)
+          columnGap: 'var(--spacing, 2rem)', // fallback of 2rem if --spacing not defined
+        },
+        '.link-inline': {
+          fontSize: 'inherit',
+          lineHeight: '1.4',
+          color: 'var(--primary-color, #4BAC87)', // using CSS variable with fallback
+        },
+        '.date': {
+          color: 'var(--color-captions, #737A77)', // @todo css varibles are not working
+          fontSize: 'var(--text-sm, 0.875rem)',
+          lineHeight: 'calc(1.25 / 0.875)',
+          textTransform: 'uppercase',
         },
       }
       addUtilities(newUtilities)
