@@ -2,16 +2,18 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@theme {
+  --shadow-*: none;
+}
+
 .p-formatted {
-
-
   /* color: theme('colors.captions') */
 }
 
 /* used for content blocks */
 .content {
-    margin-block-end: theme('spacing.5');
-    
+  margin-block-end: theme('spacing.5');
+
   &--offset {
     padding-inline-start: theme('spacing.6');
     border: 0 solid theme('colors.lines');

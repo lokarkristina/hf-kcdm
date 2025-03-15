@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxtjs/tailwindcss'],
+  plugins: ['@/plugins/youtube.client.js'],
   devtools: { enabled: true },
 
   app: {
@@ -16,7 +17,11 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/fonts.css', '~/assets/css/app.css'],
+  css: [
+    '~/assets/css/fonts.css',
+    '~/assets/css/app.css',
+    'lite-youtube-embed/src/lite-yt-embed.css',
+  ],
 
   colorMode: {
     preference: 'light',

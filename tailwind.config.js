@@ -52,6 +52,9 @@ module.exports = {
       gridTemplateColumns: {
         'split-40-60': '0.4fr 0.6fr',
       },
+      aspectRatio: {
+        video: '16 / 9',
+      },
     },
   },
   plugins: [

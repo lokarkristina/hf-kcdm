@@ -29,6 +29,7 @@ export const textList = `
     <li>design razmišljanja in design vodenja podjetju omogoča vrsto prednosti pred konkurenti</li>
   </ul>
 `
+export const videoId = 'JA-9AWVi_e4'
 
 const content = {
   h1: 'Nagrada Good Design Award Avstralija za projekt KCDM',
@@ -42,6 +43,7 @@ const content = {
   text,
   textLink,
   textList,
+  videoId,
 }
 
 export default content
