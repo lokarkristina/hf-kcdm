@@ -38,7 +38,7 @@ const textStyling = computed(() => ({
   p,
   ul,
   ol {
-    /* @todo this seems sus */
+    /* This function is deprecated, and we recommend using CSS theme variables instead. @todo */
     margin-block-end: theme('spacing.5');
     font-size: theme('fontSize.xl');
     line-height: 1.5;

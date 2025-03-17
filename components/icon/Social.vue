@@ -18,7 +18,7 @@ const { type } = defineProps<{
     <img
       :src="`/logos/${type}.png`"
       :alt="`${type} icon`"
-      class="size-7 object-contain"
+      class="object-contain size-7"
     >
   </UButton>
 </template>

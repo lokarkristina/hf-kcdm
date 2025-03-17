@@ -14,7 +14,7 @@ const pagedNews = computed(() => {
 </script>
 
 <template>
-  <div class="grid-container grid-4-8 news-list__list">
+  <div class="md:grid-container md:grid-4-8 news-list__list">
     <div class="news-list grid gap-5 ">
       <NewsItem
         v-for="newsItem in pagedNews"

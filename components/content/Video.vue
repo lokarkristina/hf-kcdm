@@ -5,13 +5,14 @@ const label = 'To je naslov videa'
 </script>
 
 <template>
-  <div class="content content-video youtube border-t border-ocean-green pt-5">
+  <div class="pt-5 border-t content content-video youtube border-ocean-green">
     <p
-      class="text-sm color-ocean-green uppercase mb-5 font-ultra text-ocean-green-600"
+      class="mb-5 text-sm uppercase color-ocean-green font-ultra text-ocean-green-600"
     >
       {{ label }}
     </p>
-    <!-- @todo video not playing bc of CORS, so fix that -->
+    <!-- @todo video not playing bc of CORS, so fix that,
+     also warning on build, so fix that also -->
     <lite-youtube
       :videoid="videoId"
       :playlabel="label"

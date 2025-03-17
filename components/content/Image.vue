@@ -7,8 +7,8 @@ const { showDescription = false } = defineProps<{
 </script>
 
 <template>
-  <div class="content content-image border-b border-ocean-green">
-    <picture class="responsive-image block">
+  <div class="border-b content content-image border-ocean-green">
+    <picture class="block responsive-image">
       <source
         v-for="img in image.images"
         :key="img.media"
@@ -19,7 +19,7 @@ const { showDescription = false } = defineProps<{
       <img
         :src="image.default"
         alt="Description of image"
-        class="responsive-image__img size-full object-cover md:max-h-72 max-h-52"
+        class="object-cover responsive-image__img size-full md:max-h-72 max-h-52"
       >
     </picture>
 
@@ -32,5 +32,3 @@ const { showDescription = false } = defineProps<{
     </p>
   </div>
 </template>
-
-<style scoped></style>

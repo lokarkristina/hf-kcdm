@@ -16,6 +16,7 @@ module.exports = {
         'hf-bg': '#F2F1EE',
         'captions': '#737A77',
         'lines': '#D8D7D3',
+        'title-gray': '#75726E',
         'hf-text-gray': '#3E5F52',
         'ocean-green': {
           DEFAULT: '#4BAC87',
@@ -58,12 +59,6 @@ module.exports = {
     },
   },
   plugins: [
-    // @custom-variant pointer-coarse {
-    //   @media (pointer: coarse) {
-    //     @slot;
-    //   }
-    // }
-    // --spacing(4) ??
     function ({ addUtilities }) {
       const newUtilities = {
         '.grid-4-8': {
@@ -83,7 +78,6 @@ module.exports = {
           display: 'grid',
           gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
           columnGap: 'var(--spacing, 2rem)', // fallback of 2rem if --spacing not defined
-          gridTemplateRows: 'repeat(2, auto) 1fr',
         },
         '.link-inline': {
           fontSize: 'inherit',

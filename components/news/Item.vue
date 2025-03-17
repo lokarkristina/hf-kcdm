@@ -8,7 +8,7 @@ const { item } = defineProps<{
 </script>
 
 <template>
-  <div class="news-item pt-4 pb-5 border-b border-hf-lines-gray">
+  <div class="pt-4 pb-5 border-b news-item border-hf-lines-gray">
     <NuxtLink :to="`/news/${item.id}`">
       <!-- @todo decoration thickness -->
       <h2

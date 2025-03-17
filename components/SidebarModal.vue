@@ -4,12 +4,12 @@ const isOpen = ref(false)
 
 <template>
   <USlideover v-model="isOpen">
-    <div class="p-4 flex-1">
+    <div class="flex-1 p-4">
       <UButton
         variant="solid"
         size="sm"
         icon="i-heroicons-x-mark-20-solid"
-        class="flex absolute end-5 top-5 z-10"
+        class="absolute z-10 flex end-5 top-5"
         square
         padded
         @click="isOpen = false"

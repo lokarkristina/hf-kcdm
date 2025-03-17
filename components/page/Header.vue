@@ -17,55 +17,62 @@ const links = [
 </script>
 
 <template>
-  <header class="header">
+  <header class="py-6 header">
     <UContainer :ui="{ constrained: 'max-w-main' }">
-      <!-- page logo -->
-      <NuxtLink
-        to="/"
-        class="header-logo"
-      >
-        <img
-          src="/logos/kcdm-logo.png"
-          alt="KCDM logo"
+      <div class="items-center md:grid-container md:grid-4-8-full">
+        <!-- page logo -->
+        <NuxtLink
+          to="/"
+          class="header-logo"
         >
-      </NuxtLink>
+          <img
+            src="/logos/kcdm-logo.png"
+            alt="KCDM logo"
+          >
+        </NuxtLink>
 
-      <!-- main navigation -->
-      <nav>
-        <UVerticalNavigation
-          :links="links"
-          :ui="{ base: 'uppercase' }"
-        />
-      </nav>
+        <div class="flex items-center">
+          <!-- main navigation -->
+          <nav>
+            <UVerticalNavigation
+              :links="links"
+              :ui="{ base: 'uppercase' }"
+            />
+          </nav>
 
-      <!-- mobile navigation -->
-      <button @click="openSlideover">
-        <UIcon
-          name="i-heroicons-bars-3"
-          class="w-5 h-5"
-          title="Open menu"
-        />
-      </button>
+          <!-- mobile navigation -->
+          <button
+            class="md:hidden"
+            @click="openSlideover"
+          >
+            <UIcon
+              name="i-heroicons-bars-3"
+              class="w-5 h-5"
+              title="Open menu"
+            />
+          </button>
 
-      <!-- search -->
-      <div class="header-search">
-        <UButton icon="i-heroicons-magnifying-glass" />
-      </div>
+          <!-- search -->
+          <div class="ml-auto header-search">
+            <UButton icon="i-heroicons-magnifying-glass" />
+          </div>
 
-      <!-- extra links -->
-      <UButton
-        :ui="{ base: 'border-dotted', rounded: 'rounded-full' }"
-        variant="ghost"
-        class="uppercase"
-        square
-        title="Search"
-      >
-        Platforma DNA
-      </UButton>
+          <!-- extra links -->
+          <UButton
+            :ui="{ base: 'mx-4 border-2 border-dotted', rounded: 'rounded-none' }"
+            variant="ghost"
+            class="uppercase"
+            square
+            title="Search"
+          >
+            Platforma DNA
+          </UButton>
 
-      <div class="language-switcher">
-        <!-- @todo set it up properly -->
-        EN
+          <div class="language-switcher">
+            <!-- @todo set it up properly -->
+            EN
+          </div>
+        </div>
       </div>
     </UContainer>
   </header>

@@ -7,13 +7,13 @@ const footerLinks = [
 
 <template>
   <!-- the bottom spacer is waaay too big on design, so reduce it -->
-  <footer class="pb-5 md:pb-10 footer mt-16 md:mt-28">
+  <footer class="pb-5 mt-16 md:pb-10 footer md:mt-28">
     <UContainer :ui="{ constrained: 'max-w-main' }">
       <!-- socials & newsletter -->
-      <div class="footer-connect py-6 border-t-8 border-lines">
+      <div class="py-6 border-t-8 footer-connect border-lines">
         <div class="grid md:grid-container md:grid-4-8-full md:gap-y-5">
-          <div class="footer-socials pb-4 md:pb-0 mb-4 md:mb-0 border-b border-lines md:border-0">
-            <p class="text-sm uppercase font-ultra mb-3">
+          <div class="pb-4 mb-4 border-b footer-socials md:pb-0 md:mb-0 border-lines md:border-0">
+            <p class="mb-3 text-sm uppercase font-ultra">
               Spremljajte nas
             </p>
             <div class="flex items-center gap-3 footer-socials__icons">
@@ -23,7 +23,7 @@ const footerLinks = [
             </div>
           </div>
           <div class="footer-newsletter">
-            <p class="text-sm uppercase font-ultra mb-3">
+            <p class="mb-3 text-sm uppercase font-ultra">
               Naročite se na naše e-novice
             </p>
             <div class="footer-form">
@@ -35,7 +35,7 @@ const footerLinks = [
 
       <!-- project info -->
       <div
-        class="footer-info md:grid-container grid-4-8-full text-sm py-4 items-start border-t-8 border-lines"
+        class="items-start py-4 text-sm border-t-8 footer-info md:grid-container grid-4-8-full border-lines"
       >
         <div>
           <p class="text-primary font-ultra">
@@ -79,14 +79,14 @@ const footerLinks = [
           &copy; Kompetenčni center za Design Management
         </p>
         <nav class="md:row-[1]">
-          <ul class="md:flex items-center gap-y-2">
+          <ul class="items-center md:flex gap-y-2">
             <li
               v-for="link in footerLinks"
               :key="link.label"
             >
               <ULink
                 :to="link.to"
-                class="link-inline py-2 md:py-1 md:ps-3 inline-flex before:none md:before:block md:before:size-1 items-center md:before:me-3 before:bg-captions"
+                class="inline-flex items-center py-2 link-inline md:py-1 md:ps-3 before:none md:before:block md:before:size-1 md:before:me-3 before:bg-captions"
               >
                 {{ link.label }}
               </ULink>
@@ -98,7 +98,7 @@ const footerLinks = [
           <ULink
             to="#"
             external
-            class="link-inline inline-flex items-center gap-1"
+            class="inline-flex items-center link-inline gap-1"
             target="_blank"
           >
             Oblikovanje in razvoj spletnih strani: Humanfrog

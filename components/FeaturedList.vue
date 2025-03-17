@@ -24,25 +24,37 @@ const list = computed<Array<NewsItem | EventItem>>(() =>
 <template>
   <div class="featured-list">
     <!-- list title -->
-    <p><slot /></p>
+    <p class="pb-2 mb-3 text-sm uppercase border-b font-ultra text-title-gray border-lines">
+      <slot />
+    </p>
     <!-- list items -->
     <ul>
       <li
         v-for="item in list"
         :key="item.id"
+        class="pb-5 border-b border-lines"
       >
         <template v-if="isNews">
-          <p>
+          <p
+            class="font-serif underline decoration-dotted text-xl/[1.2] text-primary"
+          >
             {{ item.title }}
           </p>
-          <span>{{ item.date }}</span>
+          <span class="date">{{ item.date }}</span>
         </template>
         <template v-else>
-          <p v-if="Object.keys(item).includes('location')">
+          <p
+            v-if="Object.keys(item).includes('location')"
+            class="text-sm uppercase font-ultra text-ocean-green-700"
+          >
             {{ item.location }}
           </p>
-          <span>{{ item.date }}</span>
-          <p>{{ item.title }}</p>
+          <span class="date color-black">{{ item.date }}</span>
+          <p
+            class="font-serif underline decoration-dotted text-xl/[1.2] text-primary"
+          >
+            {{ item.title }}
+          </p>
         </template>
       </li>
     </ul>
@@ -50,7 +62,7 @@ const list = computed<Array<NewsItem | EventItem>>(() =>
     <!-- learm more link -->
     <ULink
       to="#"
-      class="flex items-center gap-2 uppercase text-ocean-green-500"
+      class="flex items-center mt-3 uppercase gap-2 text-primary"
     >
       {{ `Več ${isNews ? 'novic' : 'dogodkov'}` }}
       <IconArrow

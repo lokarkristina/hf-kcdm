@@ -15,13 +15,13 @@ import content from '~/db/content'
     </TitleArea>
 
     <UContainer :ui="{ constrained: 'max-w-main' }">
-      <div class="grid-container grid-4-8">
+      <div class="md:grid-container md:grid-4-8">
         <!-- image -->
         <ContentImage />
 
         <!-- date -->
         <p
-          class="news-detail__date date inline-block pb-5 pt-2 pe-6 justify-self-start mb-5 border-b border-ocean-green-500"
+          class="inline-block pt-2 pb-5 mb-5 border-b news-detail__date date pe-6 justify-self-start border-ocean-green-500"
         >
           {{ formatDate(content.date) }}
         </p>

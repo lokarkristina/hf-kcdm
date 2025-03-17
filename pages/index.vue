@@ -1,7 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>
+  <div class="col-[1/-1]">
     <!-- title area -->
     <TitleArea :show-link-back="false">
       <template #title>
@@ -10,7 +8,8 @@
     </TitleArea>
 
     <UContainer :ui="{ constrained: 'max-w-main' }">
-      <div class="grid-container grid-4-8">
+      <!-- @todo this should be solved with another layout, where only content changes, I believe -->
+      <div class="-mt-24 md:grid-container md:grid-4-8 md:-mt-72">
         <!-- featured news -->
         <NewsFeatured />
 
