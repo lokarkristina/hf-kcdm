@@ -83,6 +83,7 @@ module.exports = {
           display: 'grid',
           gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
           columnGap: 'var(--spacing, 2rem)', // fallback of 2rem if --spacing not defined
+          gridTemplateRows: 'repeat(2, auto) 1fr',
         },
         '.link-inline': {
           fontSize: 'inherit',

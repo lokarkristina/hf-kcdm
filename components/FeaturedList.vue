@@ -53,7 +53,7 @@ const list = computed<Array<NewsItem | EventItem>>(() =>
       class="flex items-center gap-2 uppercase text-ocean-green-500"
     >
       {{ `Več ${isNews ? 'novic' : 'dogodkov'}` }}
-      <AppArrow
+      <IconArrow
         direction="right"
         size="lg"
       />

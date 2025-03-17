@@ -17,9 +17,9 @@ const footerLinks = [
               Spremljajte nas
             </p>
             <div class="flex items-center gap-3 footer-socials__icons">
-              <SocialIcon type="facebook" />
-              <SocialIcon type="linkedin" />
-              <SocialIcon type="vine" />
+              <IconSocial type="facebook" />
+              <IconSocial type="linkedin" />
+              <IconSocial type="vine" />
             </div>
           </div>
           <div class="footer-newsletter">
@@ -103,8 +103,8 @@ const footerLinks = [
           >
             Oblikovanje in razvoj spletnih strani: Humanfrog
             <img
-              src="~/assets/img/humanfrog-logo.png"
-              alt="Humagfrong logo icon"
+              src="/logos/humanfrog-logo.png"
+              alt="Humanfrog logo icon"
             >
           </ULink>
         </div>

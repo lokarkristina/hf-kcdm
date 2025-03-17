@@ -30,13 +30,13 @@ const sideLinks = [
           >
             <!-- @todo get breakpoints into the js and v-if so it doesn't render -->
             <span class="hidden md:block">
-              <AppArrow
+              <IconArrow
                 direction="left"
                 size="lg"
               />
             </span>
             <span class="md:hidden">
-              <AppArrow
+              <IconArrow
                 direction="left"
                 size="sm"
               />
@@ -61,7 +61,7 @@ const sideLinks = [
             to="/"
             class="flex items-center gap-2.5 uppercase text-sm flex-shrink-0"
           >
-            <AppArrow
+            <IconArrow
               direction="left"
               size="md"
             />

@@ -70,5 +70,3 @@ const links = [
     </UContainer>
   </header>
 </template>
-
-<style scoped></style>
